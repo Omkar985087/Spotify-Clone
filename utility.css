@@ -1,0 +1,17 @@
+
+.border{
+    border:2px solid red;
+    margin:3px
+}
+
+.container_flex{
+    display:flex;
+}
+
+.justify_content{
+    justify-content: center;
+}
+
+.items_center{
+    align-items:center;
+}
