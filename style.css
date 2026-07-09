@@ -91,6 +91,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     background-color: #252525;
+    position: relative;
 }
 
 .card>* {
@@ -111,5 +112,8 @@ body {
     padding: 4px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    position:absolute;
+    top:168px;
+    right:17px
 }
