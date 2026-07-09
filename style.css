@@ -31,7 +31,14 @@
 .heading{
     display:flex;
     gap:15px;
-    width:344 px;
+    width:344px;
     padding-top: 13px;
+    padding:23px 14px;
     font-weight: bold;
+    align-items: center;
+    font-size:13px
+}
+
+.heading img{
+    width:30px;
 }
