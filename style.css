@@ -27,3 +27,11 @@
     padding-top: 13px;
     font-weight: bold;
 }
+
+.heading{
+    display:flex;
+    gap:15px;
+    width:344 px;
+    padding-top: 13px;
+    font-weight: bold;
+}
