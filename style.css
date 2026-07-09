@@ -5,10 +5,10 @@
     padding: 0;
 }
 
-/* body{
+body{
     background-color: black;
     color:white;
-} */
+}
 
 .left{
     width:25vw;
@@ -44,13 +44,17 @@
 }
 
 .library{
-    height:50vh
+    height:79vh;
+    position:relative;
 }
 
 .footer{
     display: flex;
     font-size: 10px;
-    gap:13px
+    gap:13px;
+    position:absolute;
+    bottom:0;
+
 }
 
 .footer a{
