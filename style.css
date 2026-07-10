@@ -106,7 +106,7 @@ body {
 .play {
     width: 28px;
     height: 28px;
-    background-color: #00FF00;
+    background-color: #1fdf64;
     border-radius: 50%;
     border: 2px solid #000;
     padding: 4px;
@@ -115,5 +115,7 @@ body {
     justify-content: center;
     position:absolute;
     top:168px;
-    right:17px
+    right:17px;
+    opacity: 0;
+    transition: all 1s ease-out;
 }
