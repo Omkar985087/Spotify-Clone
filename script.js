@@ -1,4 +1,4 @@
-async function main() {
+async function getsongs() {
     let a = await fetch("/songs/");
     let response = await a.text();
     console.log(response);
@@ -16,6 +16,12 @@ async function main() {
         }
     }
 
+    return songs;
+}
+
+async function main()
+{
+    let songs=await getsongs();
     console.log(songs);
 }
 
