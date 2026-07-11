@@ -6,8 +6,17 @@ async function main() {
     let div=document.createElement("div");
     div.innerHTML=response;
 
-    let tds=div.getElementsByTagName("td");
-    console.log(tds);
+    let as=div.getElementsByTagName("a");
+    let songs=[];
+    for(let i=0;i<as.length;i++)
+    {
+        const element=as[i];
+        if(element.href.endsWith(".mp3")){
+            songs.push(element.href);
+        }
+    }
+
+    console.log(songs);
 }
 
 main();
