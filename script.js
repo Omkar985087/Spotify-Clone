@@ -13,7 +13,7 @@ async function getsongs() {
         let href = element.getAttribute("href");
 
         if (href && href.endsWith(".mp3")) {
-            songs.push("/songs/" + href);
+            songs.push(href);
         }
 
     }
@@ -25,6 +25,12 @@ async function main() {
     let songs = await getsongs();
     console.log(songs);
 
+    let songul=document.querySelector(".songlist").getElementsByTagName("ul")[0]
+
+    for(const song of songs)
+    {
+        songul.innerHTML=songul.innerHTML+`<li> ${song.replaceAll("%20"," ")} </li>`;
+    }
     // play the first song
     var audio = new Audio(songs[0]);
 
