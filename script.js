@@ -29,7 +29,17 @@ async function main() {
 
     for(const song of songs)
     {
-        songul.innerHTML=songul.innerHTML+`<li> ${song.replaceAll("%20"," ")} </li>`;
+        songul.innerHTML=songul.innerHTML+`<li> 
+                            <img class="invert" src="img/music.svg" alt="">
+                            <div class="info">
+                                <div>${song.replaceAll("%20"," ")}</div>
+                                <div>Omkar</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="img/play.svg" alt="">
+                            </div>
+                         </li>`;
     }
     // play the first song
     var audio = new Audio(songs[0]);
