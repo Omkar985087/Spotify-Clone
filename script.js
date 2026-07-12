@@ -22,6 +22,8 @@ async function getsongs() {
 }
 
 async function main() {
+
+    let currsong;
     //Get the list of all the songs
     let songs = await getsongs();
     console.log(songs);
@@ -50,6 +52,11 @@ async function main() {
         let duration=audio.duration;
         console.log(audio.duration,audio.currentSrc)
     });
+
+    // attach an eventlistener
+    Array.from(document.querySelector("songlist").getElementsByTagName("li")).forEach(e=>{
+        console.log(e.target.);
+    })
 }
 
 main();
