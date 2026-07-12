@@ -1,5 +1,5 @@
 let currsong = new Audio();
-
+const play = document.getElementById("play");
 async function getsongs() {
     let a = await fetch("/songs/");
     let response = await a.text();
@@ -30,8 +30,11 @@ async function getsongs() {
 const playmusic = (track) => {
 
     currsong.src = "/songs/" + track;
-
     currsong.play();
+    play.src = "img/pause.svg";
+
+    document.querySelector(".songinfo").innerHTML = track;
+    document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 };
 
 
@@ -123,6 +126,19 @@ async function main() {
         );
 
     });
+
+    //attach an event listener to play,next and previous
+
+    play.addEventListener("click", () => {
+        if (currsong.paused) {
+            currsong.play()
+            play.src = "img/pause.svg"
+        }
+        else {
+            currsong.pause()
+            play.src = "img/play.svg"
+        }
+    })
 
 }
 
