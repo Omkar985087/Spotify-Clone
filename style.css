@@ -166,20 +166,21 @@ body {
     font-size:17px;
 }
 
-.playbar{
-    position:fixed;
-    bottom:30px;
-    left: 384px;
-    width:70vw;
-    padding:12px;
+.playbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-    filter:invert(1);
-    background: #dad5d5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height: 40px;
-    background-color: rgb(241,246,241);
+    width: 100%;
+    height: 60px;
+    padding: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: invert(1);
+    background-color: rgb(241, 246, 241);
 }
 
 .songbutton{
@@ -225,22 +226,33 @@ body {
     padding: 12px;
 }
 
-.seekbar{
-    height: 2px;
-    width:100%;
-    border-radius: 10px ;
-    border: 2px solid black;
+.seekbar {
+    height: 4px;
+    width: calc(100% - 24px);
+
+    background-color: black;
+    border-radius: 10px;
+
     position: absolute;
-    bottom: 0;
-    margin:6;
+    bottom: 6px;
+    left: 12px;
+
+    cursor: pointer;
 }
 
-.circle{
-    width:13px;
-    height:3px;
-    border-radius: 10px;
-    background-color: pink;
-    position: realtive;
-    bottom: 13px;
-    left:0%;
+.circle {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: black;
+
+    position: absolute;
+
+    top: 50%;
+    left: 0%;
+
+    transform: translate(-50%, -50%);
+
+    transition: left 0.2s;
 }
