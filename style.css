@@ -173,6 +173,8 @@ body {
     width:70vw;
     padding:12px;
 
+    filter:invert(1);
+    background: #dad5d5;
     display:flex;
     justify-content:center;
     align-items:center;

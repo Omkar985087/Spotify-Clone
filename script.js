@@ -22,11 +22,13 @@ async function getsongs() {
 }
 
 async function main() {
+    //Get the list of all the songs
     let songs = await getsongs();
     console.log(songs);
 
     let songul=document.querySelector(".songlist").getElementsByTagName("ul")[0]
 
+    //sow all the songs in the playlist
     for(const song of songs)
     {
         songul.innerHTML=songul.innerHTML+`<li> 
