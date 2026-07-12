@@ -21,6 +21,11 @@ async function getsongs() {
     return songs;
 }
 
+const playmusic=(track)=>{
+    let audio=new Audio(track);
+    audio.play();
+}
+
 async function main() {
 
     let currsong;
@@ -54,8 +59,11 @@ async function main() {
     });
 
     // attach an eventlistener
-    Array.from(document.querySelector("songlist").getElementsByTagName("li")).forEach(e=>{
-        console.log(e.target.);
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
+        e.addEventListener("click",element=>{
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playmusic(e.querySelector(".info").firstElementChild.innerHTML)
+        })
     })
 }
 
