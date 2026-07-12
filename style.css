@@ -224,3 +224,12 @@ body {
     width:64px;
     padding: 12px;
 }
+
+.seekbar{
+    height: 2px;
+    width:98%;
+    border-radius: 10px ;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+}
