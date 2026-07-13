@@ -164,15 +164,10 @@ async function main() {
     });
 
     document.querySelector(".seekbar").addEventListener("click", e => {
-        let percent =
-            (e.offsetX / e.target.getBoundingClientRect().width) * 100;
-
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
         document.querySelector(".circle").style.left = percent + "%";
-
-        currsong.currentTime =
-            (currsong.duration * percent) / 100;
-    });
-
+        currsong.currentTime = ((currsong.duration) * percent) / 100;
+    })
 }
 
 main();
