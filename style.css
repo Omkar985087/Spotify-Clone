@@ -166,6 +166,7 @@ body {
     font-size:17px;
 }
 
+
 .playbar {
     position: absolute;
     bottom: 0;
@@ -179,6 +180,7 @@ body {
     background-color: rgb(241, 246, 241);
 }
 
+
 .songbutton{
     display:flex;
     gap:16px;
@@ -187,7 +189,7 @@ body {
 .songlist{
     height:544px;
     overflow: auto;
-    margin-bottom: 44px 0;
+    margin-bottom: 44px;
 }
 .songlist ul{
     padding: 0 12px;
@@ -206,7 +208,7 @@ body {
     border-radius: 5px;
 }
 
-.songlist info{
+.songlist .info{
     font-size:13px;
     width:344px;
 }

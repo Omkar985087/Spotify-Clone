@@ -26,6 +26,19 @@ async function getsongs() {
     return songs;
 }
 
+function secondsToMinutesSeconds(seconds) {
+    if (isNaN(seconds)) {
+        return "00:00";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
+        .toString()
+        .padStart(2, "0")}`;
+}
+
 
 const playmusic = (track) => {
 
@@ -138,6 +151,12 @@ async function main() {
             currsong.pause()
             play.src = "img/play.svg"
         }
+    })
+
+    currsong.addEventListener("timeupdate",()=>{
+        console.log(currsong.currentTime,currsong.duration);
+        document.querySelector(".songtime").innerHTML=`
+        ${secondsToMinutesSeconds(currsong.currentTime)} / ${secondsToMinutesSeconds(currsong.duration)}`;
     })
 
 }
