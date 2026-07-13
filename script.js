@@ -159,6 +159,11 @@ async function main() {
         console.log(currsong.currentTime,currsong.duration);
         document.querySelector(".songtime").innerHTML=`
         ${secondsToMinutesSeconds(currsong.currentTime)} / ${secondsToMinutesSeconds(currsong.duration)}`;
+        document.querySelector(".circle").style.left=(currsong.currentTime/currsong.duration)*100+"%"
+    })
+
+    document.querySelector(".seekbar").addEventListener("click",e=>{
+        console.log(e);
     })
 
 }
