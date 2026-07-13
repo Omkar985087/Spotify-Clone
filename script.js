@@ -40,13 +40,15 @@ function secondsToMinutesSeconds(seconds) {
 }
 
 
-const playmusic = (track) => {
+const playmusic = (track,pause=false) => {
 
     currsong.src = "/songs/" + track;
-    currsong.play();
-    play.src = "img/pause.svg";
+    if(!pause){
+        currsong.play();
+        play.src="pause.svg";
+    }
 
-    document.querySelector(".songinfo").innerHTML = track;
+    document.querySelector(".songinfo").innerHTML = decodeURI(track);
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 };
 
@@ -57,7 +59,7 @@ async function main() {
     let songs = await getsongs();
 
     console.log(songs);
-
+    playmusic(songs[0],true)
 
     let songul = document
         .querySelector(".songlist")
