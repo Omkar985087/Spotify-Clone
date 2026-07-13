@@ -176,7 +176,7 @@ async function main() {
 
     //add an event listener for close
     document.querySelector(".close").addEventListener("click",()=>{
-        document.querySelector(".left").style.left="-100%"
+        document.querySelector(".left").style.left="-120%"
     })
 }
 
