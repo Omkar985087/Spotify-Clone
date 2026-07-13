@@ -195,6 +195,13 @@ body {
 .hamburger{
     display: none;
 }
+
+.hamburgercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:14px;
+}
 .songlist ul{
     padding: 0 12px;
 }
