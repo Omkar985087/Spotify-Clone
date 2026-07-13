@@ -170,8 +170,13 @@ async function main() {
     })
 
     //add an event listener for hamburger
-    document.querySelector(".hambuger").addEventListener("click",()=>{
+    document.querySelector(".hamburger").addEventListener("click",()=>{
         document.querySelector(".left").style.left="0"
+    })
+
+    //add an event listener for close
+    document.querySelector(".close").addEventListener("click",()=>{
+        document.querySelector(".left").style.left="-100%"
     })
 }
 

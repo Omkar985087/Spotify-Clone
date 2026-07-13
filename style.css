@@ -21,6 +21,10 @@ body {
     padding: 10px;
 }
 
+.close {
+    display: none;
+}
+
 .right{
     width:75vw;
     margin:16px 0;
@@ -180,7 +184,6 @@ body {
     background-color: rgb(241, 246, 241);
 }
 
-
 .songbutton{
     display:flex;
     gap:16px;
@@ -291,7 +294,14 @@ body {
         left: -100%;
         transition: all 0.3s;
         z-index: 1;
-        width: 233px;
+        width: 433px;
+    }
+
+    .left .close{
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
     }
 
     .right {
