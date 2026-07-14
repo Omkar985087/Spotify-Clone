@@ -278,9 +278,22 @@ body {
     cursor: pointer;
 }
 
-.songinfo, .songtime{
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.songinfo{
     color: black;
     padding:0 12px;
+    width:250px
+}
+
+.songtime{
+    color: black;
+    padding:0 12px;
+    width:125px
 }
 
 .abovebar {
