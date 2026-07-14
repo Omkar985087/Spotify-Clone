@@ -28,7 +28,7 @@ async function getsongs() {
 }
 
 function secondsToMinutesSeconds(seconds) {
-    if (isNaN(seconds)) {
+    if (isNaN(seconds) || seconds<0) {
         return "00:00";
     }
 
@@ -183,7 +183,9 @@ async function main() {
     //add an event listener for prev
     previous.addEventListener("click",()=>{
         console.log("previous clicked");
-        console.log(currsong.src)
+        let index=songs.indexOf(currsong.src.split("/").slice(-1)[0]);
+        if((index-1)>=0)
+            playmusic(songs[index-1]);
     })
 
      //add an event listener for next
@@ -191,7 +193,6 @@ async function main() {
         console.log("next clicked");
         let index=songs.indexOf(currsong.src.split("/").slice(-1)[0]);
         if((index+1)>length)
-
             playmusic(songs[index+1]);
     })
 
