@@ -1,5 +1,6 @@
 let currsong = new Audio();
 const play = document.getElementById("play");
+let songs;
 async function getsongs() {
     let a = await fetch("/songs/");
     let response = await a.text();
@@ -56,7 +57,7 @@ const playmusic = (track, pause = false) => {
 async function main() {
 
     // Get songs
-    let songs = await getsongs();
+    songs = await getsongs();
 
     console.log(songs);
     playmusic(songs[0], true)
@@ -178,6 +179,23 @@ async function main() {
     document.querySelector(".close").addEventListener("click",()=>{
         document.querySelector(".left").style.left="-120%"
     })
+
+    //add an event listener for prev
+    previous.addEventListener("click",()=>{
+        console.log("previous clicked");
+        console.log(currsong.src)
+    })
+
+     //add an event listener for next
+    next.addEventListener("click",()=>{
+        console.log("next clicked");
+        let index=songs.indexOf(currsong.src.split("/").slice(-1)[0]);
+        if((index+1)>length)
+
+            playmusic(songs[index+1]);
+    })
+
+
 }
 
 main();
