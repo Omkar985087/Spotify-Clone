@@ -296,6 +296,17 @@ body {
     width:125px
 }
 
+.range{
+    height: 20px;
+}
+
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .abovebar {
     display: flex;
     justify-content: space-between;
@@ -320,6 +331,14 @@ body {
         right: 31px;
         top: 25px;
         width: 29px;
+    }
+
+    .timevol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
     }
 
     .right {
@@ -365,4 +384,6 @@ body {
     .songinfo,.songtime{
         width: auto;
     }
+
+
 }
