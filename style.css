@@ -282,6 +282,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
 }
 
 .songinfo{
@@ -317,73 +318,111 @@ body {
 }
 
 @media (max-width: 1200px) {
+
     .left {
         background-color: black;
-        position: absolute;
+        position: fixed;
         left: -120%;
-        transition: all 0.3s;
-        z-index: 1;
+        top: 0;
+        transition: left 0.3s ease;
+        z-index: 10;
         width: 373px;
+        height: 100vh;
+        padding: 10px;
     }
 
-    .left .close{
+    .left .close {
         position: absolute;
         right: 31px;
         top: 25px;
         width: 29px;
+        z-index: 11;
     }
 
-    .timevol{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 13px;
+    .close {
+        display: block;
+        cursor: pointer;
     }
 
     .right {
         width: 100vw;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .cardcontainer {
+        margin: 0;
+        padding: 15px;
+        justify-content: center;
+        max-height: calc(100vh - 220px);
+    }
+
+    .card {
+        width: 250px;
     }
 
     .playbar {
-        width: calc(100% - 32px);
-    }
-
-    .seekbar{
-        width:calc(100vw-70px);
-    }
-
-    .cardcontainer{
-        margin: 0;
-        justify-content: center;
-    }
-
-    .right{
-        margin:0;
-    }
-    .card {
-        width: 55vw;
-    }
-
-    .close{
-        display: block;
-        cursor: pointer;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        padding: 10px 12px 15px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
     }
 
     .abovebar {
         flex-direction: column;
-        gap: 23px;
+        justify-content: center;
         align-items: center;
+        gap: 10px;
+        padding: 0 12px 12px;
     }
 
-    .hamburger{
-        display: block;
+    .songinfo {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .songbutton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .timevol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .songtime {
+        width: auto;
+        padding: 0;
+    }
+
+    .volume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .volume img {
+        width: 25px;
         cursor: pointer;
     }
 
-    .songinfo,.songtime{
-        width: auto;
+    .seekbar {
+        width: calc(100% - 24px);
+        left: 12px;
+        bottom: 6px;
     }
-
-
 }
