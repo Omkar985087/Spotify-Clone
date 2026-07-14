@@ -190,12 +190,12 @@ async function main() {
 
      //add an event listener for next
     next.addEventListener("click",()=>{
+        currsong.pause();
         console.log("next clicked");
         let index=songs.indexOf(currsong.src.split("/").slice(-1)[0]);
-        if((index+1)>length)
+        if((index+1)<songs.length)
             playmusic(songs[index+1]);
     })
-
 
 }
 
