@@ -227,6 +227,10 @@ body {
     font-size:13px;
     width:344px;
 }
+
+.info div{
+    word-break: break-all;
+}
 .playnow{
     display: flex;
     justify-content: center;
@@ -343,5 +347,9 @@ body {
     .hamburger{
         display: block;
         cursor: pointer;
+    }
+
+    .songinfo,.songtime{
+        width: auto;
     }
 }
